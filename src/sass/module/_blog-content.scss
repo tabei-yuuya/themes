@@ -1,0 +1,67 @@
+@use "global" as *;
+.blog-content{
+  position: relative;
+}
+
+.blog-content__wrapper{
+  @include mq("md"){
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.blog-content__cards{
+  min-width: rem(333);
+    width: 100%;
+    @include mq("md"){
+      position: relative;
+      z-index: 10;
+      max-width: rem(1079);
+    }
+}
+
+.blog-content__pagination{
+  margin-top: rem(80);
+  max-width: rem(444);
+  margin: 0 auto;
+}
+
+.blog-content__side-menu{
+  margin-top: rem(80);
+  @include mq("md"){
+    width: 27%;
+    margin-left: rem(80);
+    margin-top: 0;
+  }
+}
+
+.blog-content__img{
+  width: rem(135);
+  aspect-ratio: 310 / 138;
+  position: absolute;
+  top: rem(-28);
+  left: calc(50% - min(47vw, 38.78rem));
+  @include mq("md"){
+    width: rem(301);
+    aspect-ratio: 310 / 138;
+    top: rem(-70);
+    }
+}
+
+// ブログ詳細ページ
+.blog-content__box{
+  @include mq("md"){
+    width: 64.8%;
+  }
+}
+
+.blog-content__detail{
+  width: 100%;
+}
+
+.blog-content__img--blog-detail{
+  top: rem(-23);
+  @include mq("md"){
+    top: rem(-65);
+    }
+}

@@ -1,0 +1,96 @@
+@use "global" as *;
+
+.drawer-menu{
+  background-color: $green;
+  height: 100%;
+  height: calc(100% - 5rem);
+  width: 100%;
+  margin-top: rem(80);
+  color: $white;
+  display: none;
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+  overflow-y: auto;
+}
+.drawer-menu.is-active{
+  display: block;
+}
+
+.drawer-menu__inner{
+  height: 100%;
+}
+
+.drawer-menu__menu{
+  color: $white;
+  padding-top: rem(40);
+}
+
+.drawer-menu__item{
+  display: flex;
+  flex-direction: column;
+  gap: rem(25);
+}
+
+.drawer-menu__item + .drawer-menu__item{
+  margin-top: rem(45);
+}
+
+.drawer-menu__term{
+  display: flex;
+  font-size: rem(16);
+  line-height: 1;
+  font-weight: $bold;
+  font-family: $third-font-family;
+}
+
+.drawer-menu__img2{
+  width: rem(18);
+  aspect-ratio: 1 / 1;
+  margin: rem(-1) rem(5) 0 0;
+}
+
+
+.drawer-menu__description{
+  font-size: rem(16);
+  line-height: 1;
+  font-family: $third-font-family;
+  font-weight: $regular;
+  margin-left: rem(25);
+}
+
+.drawer-menu__description:nth-of-type(1){
+  margin-top: rem(25);
+}
+
+.drawer-menu__link{
+  transition: all 0.3s;
+}
+.drawer-menu__link:hover{
+  opacity: 0.5;
+}
+
+.drawer-menu__container{
+  display: grid;
+  gap: rem(40) rem(0);
+  grid-template-areas:
+    "a c"
+    "b d"
+  ;
+}
+
+.drawer-menu__items-1{
+  grid-area: a;
+}
+
+.drawer-menu__items-2{
+  grid-area: b;
+}
+
+.drawer-menu__items-3{
+  grid-area: c;
+}
+
+.drawer-menu__items-4{
+  grid-area: d;
+}

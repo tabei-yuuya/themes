@@ -1,0 +1,90 @@
+@use "global" as *;
+.info-content-tab{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  gap: rem(21) rem(19);
+  @include mq("md"){
+    gap: rem(21) rem(90);
+  }
+}
+
+.info-content-tab__item{
+  background-color: $green2;
+  font-family: $third-font-family;
+  font-weight: $normal;
+  color: $green;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25);
+  font-size: rem(14);
+  padding: rem(10) rem(15) rem(9);
+  text-transform:uppercase;
+  transition: color 0.3s, background-color 0.3s;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  @include mq("md"){
+    font-size: rem(24);
+    padding: rem(26) 0 rem(26) rem(60);
+    box-shadow: none;
+  }
+}
+
+.info-content-tab__item::before{
+  @include mq("md"){
+    position: absolute;
+    left: 10%;
+    top: 17%;
+    content: "";
+    display: inline-block;
+    width: rem(64);
+    height: rem(64);
+    mask-image: url(../images/info-tab1.svg);
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-color: $green;
+    margin-right: rem(8)
+    }
+}
+
+.info-content-tab__item:nth-child(2)::before{
+  @include mq("md"){
+    left: 6%;
+    top: 15%;
+    mask-image: url(../images/info-tab2.svg);
+    }
+}
+
+.info-content-tab__item:nth-child(3)::before{
+  @include mq("md"){
+    mask-image: url(../images/info-tab3.svg);
+    }
+}
+
+.info-content-tab__item:hover{
+  color: $white;
+  background-color: $green;
+  transition: 0.5s ease-out;
+  opacity: 1;
+}
+
+.info-content-tab__item:hover::before{
+  transition: 0.5s ease-out;
+  background-color: $white;
+}
+
+.info-content-tab__item.active{
+  color: $white;
+  background-color: $green;
+  @include mq("md"){
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25);
+  }
+}
+
+.info-content-tab__item.active::before {
+  background-color: $white;
+}
+

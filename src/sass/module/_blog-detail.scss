@@ -1,0 +1,91 @@
+@use "global" as *;
+.blog-detail__date{
+  font-size:rem(14) ;
+  font-family: $base-font-family;
+  font-weight: $regular;
+  color: $black;
+}
+
+.blog-detail__title{
+  font-size: rem(24);
+  font-family: $third-font-family;
+  font-weight: $medium;
+  color: $black;
+  border-bottom: rem(1) solid $green;
+  margin-top: rem(6);
+  @include mq("md"){
+    font-size: rem(33);
+  }
+}
+.blog-detail__img{
+  width: 100%;
+  aspect-ratio: 345 / 231;
+  object-fit: cover;
+  margin-top: rem(24);
+  @include mq("md"){
+    margin-top: rem(35);
+  }
+}
+
+.blog-detail__box + .blog-detail__box{
+  @include mq("md"){
+    margin-top: rem(40);
+  }
+}
+
+.blog-detail figure{
+  width: 100%;
+  aspect-ratio: 345 / 231;
+  object-fit: cover;
+  margin-top: rem(24);
+  @include mq("md"){
+    margin-top: rem(35);
+  }
+}
+
+.blog-detail p{
+  font-size: rem(16);
+  font-family: $second-font-family;
+  font-weight: $regular;
+  color: $black;
+  line-height: 1.5;
+  margin-top: rem(24);
+  @include mq("md"){
+    margin-top: rem(40);
+  }
+}
+
+.blog-detail ul{
+  margin-top: rem(24);
+  @include mq("md"){
+    margin-top: rem(39);
+  }
+}
+
+.blog-detail li{
+  font-size: rem(16);
+  font-family: $second-font-family;
+  font-weight: $regular;
+  color: $black;
+  margin-left: rem(27);
+  position: relative;
+}
+
+.blog-detail li:not(:first-child){
+  margin-top: rem(4);
+}
+
+.blog-detail li::before{
+  content: "";
+  display: inline-block;
+  width: rem(18);
+  height: rem(18);
+  mask-image: url(../images/hitode.svg);
+  mask-size: contain;
+  mask-position:  center;
+  mask-repeat: no-repeat;
+  background-color: $green;
+  position: absolute;
+  top: rem(3);
+  left: rem(-25);
+}

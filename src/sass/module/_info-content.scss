@@ -1,0 +1,47 @@
+@use "global" as *;
+
+.html__info{
+  scroll-padding-top:rem(250) ;
+}
+
+.info-content{
+  position: relative;
+}
+
+.info-content__tab{
+  position: relative;
+    z-index: 10;
+}
+
+
+.info-content__tab-content{
+  display: none;
+}
+.info-content__tab-content.active{
+  display: block;
+}
+
+.info-content__area{
+  margin-top: rem(15);
+  @include mq("md"){
+    margin-top: rem(24);
+  }
+}
+
+.info-content__img{
+  width: rem(130);
+  aspect-ratio: 310 / 130;
+  position: absolute;
+  top: rem(-97);
+  left: calc(50% - min(47vw, 38.78rem));
+  @include mq("md"){
+    width: rem(301);
+    aspect-ratio: 310 / 138;
+    top: rem(-70);
+    }
+}
+
+
+
+
+

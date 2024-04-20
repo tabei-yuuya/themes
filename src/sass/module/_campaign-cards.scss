@@ -1,0 +1,13 @@
+@use "global" as *;
+
+.campaign-cards.campaign-cards--grid{
+  display: grid;
+  row-gap: rem(40);
+  grid-template-columns: repeat(auto-fit, minmax(rem(280), 1fr));
+  padding: 0 rem(33);
+  @include mq("md"){
+    padding: 0;
+    grid-template-columns: repeat(2, 1fr);
+    gap: rem(81) rem(40);
+  }
+}

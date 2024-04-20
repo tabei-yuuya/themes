@@ -1,0 +1,32 @@
+@use "global" as *;
+.price-content{
+  position: relative;
+}
+
+.price-content .inner{
+  @include mq("md"){
+    max-width:rem(750) ;
+    width: 100%;
+  }
+}
+
+.price-content__list{
+  @include mq("md"){
+    height: rem(178);
+  }
+}
+
+
+.price-content__img{
+  width: rem(135);
+  aspect-ratio: 310 / 138;
+  position: absolute;
+  top: rem(-27);
+  left: calc(50% - min(47vw, 38.78rem));
+  @include mq("md"){
+    width: rem(301);
+    aspect-ratio: 310 / 138;
+    top: rem(-70);
+    }
+}
+

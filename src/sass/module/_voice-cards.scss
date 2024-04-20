@@ -1,0 +1,23 @@
+@use "global" as *;
+
+.voice__cards{
+  display: flex;
+  flex-direction: column;
+  gap: rem(40);
+  margin-top: rem(41);
+  @include mq("md"){
+    flex-direction: row;
+    margin-top: rem(30);
+  }
+}
+
+.voice-cards__card{
+    display: flex;
+    flex-direction: column;
+    max-width: rem(600);
+    width: 100%;
+    height: auto;
+    @include mq("md"){
+      display: inline-block;
+    }
+}

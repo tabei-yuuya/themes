@@ -1,0 +1,21 @@
+@use "global" as *;
+.content-fish{
+  position: relative;
+}
+
+.content-fish::before{
+  content: "";
+  background: url(../images/voice-hanadai.png) center center / contain no-repeat;
+  width: rem(135);
+  aspect-ratio: 310 / 138;
+  position: absolute;
+  top: rem(-24);
+  left: calc(50% - min(47vw, 38.78rem));
+  z-index: -10;
+  @include mq("md"){
+    width: rem(301);
+    aspect-ratio: 310 / 138;
+    top: rem(-70);
+    }
+
+}
