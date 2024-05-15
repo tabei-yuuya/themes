@@ -56,12 +56,12 @@ jQuery(function ($) {
     $(".js-drawer").fadeToggle();
   });
 
-//ドロワーメニュー
-$("#MenuButton").click(function () {
-  $(".js-drawer-open").toggleClass("open");
-  $(".drawer-menu").toggleClass("open");
-  $("html").toggleClass("is-fixed");
-});
+  //ドロワーメニュー
+  $("#MenuButton").click(function () {
+    $(".js-drawer-open").toggleClass("open");
+    $(".drawer-menu").toggleClass("open");
+    $("html").toggleClass("is-fixed");
+  });
 
   // ハンバーガーメニューボタンがクリックされたときのイベントハンドラを設定
   $(".js-hamburger").click(function () {
@@ -81,58 +81,56 @@ $("#MenuButton").click(function () {
     }
   });
 
-// スムーススクロール (絶対パスのリンク先が現在のページであった場合でも作動)
+  // スムーススクロール (絶対パスのリンク先が現在のページであった場合でも作動)
 
-$(document).on('click', 'a[href*="#"]', function () {
-  var time = 400;
-  var header = $('header').innerHeight(); // ヘッダーの高さを取得
-  var target = $(this.hash);
-  if (!target.length) return;
-  var targetY = target.offset().top - header; // ヘッダーの高さを考慮してスクロール位置を計算
-  $('html,body').animate({
-    scrollTop: targetY
-  }, time, 'swing');
-  return false;
-});
-var swiper1 = new Swiper(".js-mv-swiper", {
-  loop: true,
-  effect: "fade",
-  speed: 3000,
-  allowTouchMove: false,
-  autoplay: {
-    delay: 2000
-  }
-});
-
-var swiper = new Swiper(".swiper2", {
-  loop: true,
-  slidesPerView: 1.213,
-  spaceBetween: 24,
-  speed: 2000,
-  breakpoints: {
-    425: {
-      slidesPerView: 1.5,
-      spaceBetween: 30
-    },
-    768: {
-      slidesPerView: 2.8,
-      spaceBetween: 30
-    },
-    1024: {
-      slidesPerView: 2.8,
-      spaceBetween: 41
-    },
-    1440: {
-      slidesPerView: 3,
-      spaceBetween: 41
+  $(document).on('click', 'a[href*="#"]', function () {
+    var time = 400;
+    var header = $('header').innerHeight(); // ヘッダーの高さを取得
+    var target = $(this.hash);
+    if (!target.length) return;
+    var targetY = target.offset().top - header; // ヘッダーの高さを考慮してスクロール位置を計算
+    $('html,body').animate({
+      scrollTop: targetY
+    }, time, 'swing');
+    return false;
+  });
+  var swiper1 = new Swiper(".js-mv-swiper", {
+    loop: true,
+    effect: "fade",
+    speed: 3000,
+    allowTouchMove: false,
+    autoplay: {
+      delay: 2000
     }
-  },
-  navigation: {
-    nextEl: ".campaign__next",
-    prevEl: ".campaign__prev"
-  }
-});
-
+  });
+  var swiper = new Swiper(".swiper2", {
+    loop: true,
+    slidesPerView: 1.213,
+    spaceBetween: 24,
+    speed: 2000,
+    breakpoints: {
+      425: {
+        slidesPerView: 1.5,
+        spaceBetween: 30
+      },
+      768: {
+        slidesPerView: 2.8,
+        spaceBetween: 30
+      },
+      1024: {
+        slidesPerView: 2.8,
+        spaceBetween: 41
+      },
+      1440: {
+        slidesPerView: 3,
+        spaceBetween: 41
+      }
+    },
+    navigation: {
+      nextEl: ".campaign__next",
+      prevEl: ".campaign__prev"
+    }
+  });
   var tabButton = $(".js-tab-item"),
     tabContent = $(".js-content-area");
   tabButton.on("click", function () {
@@ -156,7 +154,7 @@ var swiper = new Swiper(".swiper2", {
     var tabname = "tab__menu-1";
   }
 
-// モーダル
+  // モーダル
 
   var open = $(".js-modal-open"),
     close = $(".js-modal__close"),
@@ -168,14 +166,14 @@ var swiper = new Swiper(".swiper2", {
     $("#".concat(targetModalId)).addClass("is-open");
     $('body').css('overflow-y', 'hidden'); // 本文の縦スクロールを無効
 
-  //閉じるボタンをクリックしたらモーダルを閉じる
-  close.add(modal).on("click", function () {
-    modal.removeClass("is-open");
-    $('body').css('overflow-y', 'auto'); // 本文の縦スクロールを有効
+    //閉じるボタンをクリックしたらモーダルを閉じる
+    close.add(modal).on("click", function () {
+      modal.removeClass("is-open");
+      $('body').css('overflow-y', 'auto'); // 本文の縦スクロールを有効
+    });
   });
-});
 
-// ブログアコーディオン
+  // ブログアコーディオン
   $(".js-accordion__item:first-child .js-accordion__content").css("display", "block");
   $(".js-accordion__item:nth-of-type(2)  .js-accordion__content").css("display", "none ");
   $(".js-accordion__title").on("click", function () {
@@ -183,12 +181,11 @@ var swiper = new Swiper(".swiper2", {
     $(this).next().slideToggle(300);
   });
 
-// faqアコーディオン
+  // faqアコーディオン
   $(".js-faq-accordion__item  .js-faq-accordion__content").css("display", "block");
   $(".js-faq-accordion__item .js-faq-accordion__title").addClass("is-open");
   $(".js-faq-accordion__title").on("click", function () {
     $(this).toggleClass("is-open");
     $(this).next().slideToggle(300);
   });
-
 });
