@@ -48,25 +48,21 @@ jQuery(function ($) {
       }
     });
   });
-});
-$(function () {
+
   // ハンバーガーメニュー
   $(" .js-hamburger, .js-drawer, .js-drawer a").click(function () {
     $("header").toggleClass("is-active");
     $(".js-hamburger").toggleClass("is-active");
     $(".js-drawer").fadeToggle();
   });
-});
 
 //ドロワーメニュー
 $("#MenuButton").click(function () {
-  // $(".l-drawer-menu").toggleClass("is-show");
-  // $(".p-drawer-menu").toggleClass("is-show");
   $(".js-drawer-open").toggleClass("open");
   $(".drawer-menu").toggleClass("open");
   $("html").toggleClass("is-fixed");
 });
-$(function () {
+
   // ハンバーガーメニューボタンがクリックされたときのイベントハンドラを設定
   $(".js-hamburger").click(function () {
     // 現在のbodyタグのoverflowスタイルを確認
@@ -84,7 +80,6 @@ $(function () {
       });
     }
   });
-});
 
 // スムーススクロール (絶対パスのリンク先が現在のページであった場合でも作動)
 
@@ -108,6 +103,7 @@ var swiper1 = new Swiper(".js-mv-swiper", {
     delay: 2000
   }
 });
+
 var swiper = new Swiper(".swiper2", {
   loop: true,
   slidesPerView: 1.213,
@@ -136,7 +132,7 @@ var swiper = new Swiper(".swiper2", {
     prevEl: ".campaign__prev"
   }
 });
-$(function () {
+
   var tabButton = $(".js-tab-item"),
     tabContent = $(".js-content-area");
   tabButton.on("click", function () {
@@ -159,19 +155,9 @@ $(function () {
   } else {
     var tabname = "tab__menu-1";
   }
-  //コンテンツ非表示・タブを非アクティブ
-  $(".js-tab-item").removeClass("active");
-  $(".js-content-area").removeClass("active");
-  //何番目のタブかを格納
-  var tabno = $(".js-tab-direct .js-content-area#" + tabname).index();
-  //コンテンツ表示
-  $(".js-content-area").eq(tabno).addClass("active");
-  //タブのアクティブ化
-  $(".js-tab-item").eq(tabno).addClass("active");
-});
 
 // モーダル
-$(function () {
+
   var open = $(".js-modal-open"),
     close = $(".js-modal__close"),
     modal = $(".js-modal");
@@ -181,7 +167,6 @@ $(function () {
     var targetModalId = $(this).data("target");
     $("#".concat(targetModalId)).addClass("is-open");
     $('body').css('overflow-y', 'hidden'); // 本文の縦スクロールを無効
-  });
 
   //閉じるボタンをクリックしたらモーダルを閉じる
   close.add(modal).on("click", function () {
@@ -191,24 +176,19 @@ $(function () {
 });
 
 // ブログアコーディオン
-$(function () {
   $(".js-accordion__item:first-child .js-accordion__content").css("display", "block");
-  // $(".js-accordion__item:first-child .js-accordion__title").addClass(
-  //   "is-open"
-  // );
   $(".js-accordion__item:nth-of-type(2)  .js-accordion__content").css("display", "none ");
   $(".js-accordion__title").on("click", function () {
     $(this).toggleClass("is-open");
     $(this).next().slideToggle(300);
   });
-});
 
 // faqアコーディオン
-$(function () {
   $(".js-faq-accordion__item  .js-faq-accordion__content").css("display", "block");
   $(".js-faq-accordion__item .js-faq-accordion__title").addClass("is-open");
   $(".js-faq-accordion__title").on("click", function () {
     $(this).toggleClass("is-open");
     $(this).next().slideToggle(300);
   });
+
 });

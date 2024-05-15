@@ -126,8 +126,8 @@
                         <a href="<?php echo get_month_link($year, $month); ?>" class="blog-accordion__text"><?php echo $month;?>月</a>
                         <?php endforeach; ?>
                       </div>
-                      </div>
-                        <?php endforeach; ?>
+                      <?php endforeach; ?>
+                    </div>
                   </div>
               </div>
             </div>
