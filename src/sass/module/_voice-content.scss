@@ -28,3 +28,10 @@
     top: rem(-70);
     }
 }
+
+.voice-content__pagination{
+  margin: rem(79) auto 0;
+  @include mq("md"){
+    margin-top: rem(71);
+  }
+}

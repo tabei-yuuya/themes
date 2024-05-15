@@ -6,26 +6,26 @@
       <div class="swiper-wrapper">
         <div class="swiper-slide">
           <picture>
-            <source srcset="./assets/images/pc-mv1.jpg" media="(min-width: 768px)" >
-            <img src="./assets/images/sp-mv1.jpg" alt="ウミガメがとても綺麗な海を泳いでいる画像">
+            <source srcset="<?php echo get_theme_file_uri(); ?>/assets/images/pc-mv1.jpg" media="(min-width: 768px)" >
+            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/sp-mv1.jpg" alt="ウミガメがとても綺麗な海を泳いでいる画像">
           </picture>
         </div>
         <div class="swiper-slide">
           <picture>
-            <source srcset="./assets/images/pc-mv2.jpg" media="(min-width: 768px)" >
-            <img src="./assets/images/sp-mv2.jpg" alt="2人のダイバーがウミガメを見ている">
+            <source srcset="<?php echo get_theme_file_uri(); ?>/assets/images/pc-mv2.jpg" media="(min-width: 768px)" >
+            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/sp-mv2.jpg" alt="2人のダイバーがウミガメを見ている">
           </picture>
         </div>
        <div class="swiper-slide">
           <picture>
-            <source srcset="./assets/images/pc-mv3.jpg" media="(min-width: 768px)" >
-            <img src="./assets/images/sp-mv3.jpg" alt="島と複数の船が海の上を進んでいる画像">
+            <source srcset="<?php echo get_theme_file_uri(); ?>/assets/images/pc-mv3.jpg" media="(min-width: 768px)" >
+            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/sp-mv3.jpg" alt="島と複数の船が海の上を進んでいる画像">
           </picture>
         </div>
         <div class="swiper-slide">
           <picture>
-            <source srcset="./assets/images/pc-mv4.jpg" media="(min-width: 768px)" >
-            <img src="./assets/images/sp-mv4.jpg" alt="砂浜とエメラルドブルーの海の画像">
+            <source srcset="<?php echo get_theme_file_uri(); ?>/assets/images/pc-mv4.jpg" media="(min-width: 768px)" >
+            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/sp-mv4.jpg" alt="砂浜とエメラルドブルーの海の画像">
           </picture>
         </div>
       </div>
@@ -68,7 +68,7 @@
             <div class="swiper-slide campaign-cards__item">
               <a href="#" class="campaign-cards__card card">
                 <div class="card__img">
-                <img src="./assets/images/campaign1.jpg" alt="たくさんの魚が泳いでいる画像">
+                <img src="<?php echo get_theme_file_uri(); ?>/assets/images/campaign1.jpg" alt="たくさんの魚が泳いでいる画像">
               </div>
               <div class="card__contents">
                 <div class="card__head">
@@ -89,7 +89,7 @@
             <div class="swiper-slide campaign-cards__item">
               <a href="#" class="campaign-cards__card card">
                 <div class="card__img">
-                <img src="./assets/images/campaign2.jpg" alt="海と複数のボートの画像">
+                <img src="<?php echo get_theme_file_uri(); ?>/assets/images/campaign2.jpg" alt="海と複数のボートの画像">
               </div>
               <div class="card__contents">
                 <div class="card__head">
@@ -110,7 +110,7 @@
             <div class="swiper-slide campaign-cards__item">
               <a href="#" class="campaign-cards__card card">
                 <div class="card__img">
-                <img src="./assets/images/campaign3.jpg" alt="小さいクラゲ達が暗い水の中を泳いでいる画像">
+                <img src="<?php echo get_theme_file_uri(); ?>/assets/images/campaign3.jpg" alt="小さいクラゲ達が暗い水の中を泳いでいる画像">
               </div>
               <div class="card__contents">
                 <div class="card__head">
@@ -131,7 +131,7 @@
             <div class="swiper-slide campaign-cards__item">
               <a href="#" class="campaign-cards__card card">
                 <div class="card__img">
-                <img src="./assets/images/campaign4.jpg" alt="4人のダイバーが海面に顔を出している画像">
+                <img src="<?php echo get_theme_file_uri(); ?>/assets/images/campaign4.jpg" alt="4人のダイバーが海面に顔を出している画像">
               </div>
               <div class="card__contents">
                 <div class="card__head">
@@ -152,7 +152,7 @@
             <div class="swiper-slide campaign-cards__item">
               <a href="#" class="campaign-card__card card">
                 <div class="card__img">
-                <img src="./assets/images/campaign1.jpg" alt="たくさんの魚が泳いでいる画像">
+                <img src="<?php echo get_theme_file_uri(); ?>/assets/images/campaign1.jpg" alt="たくさんの魚が泳いでいる画像">
               </div>
               <div class="card__contents">
                 <div class="card__head">
@@ -173,7 +173,7 @@
             <div class="swiper-slide campaign-cards__item">
               <a href="#" class="campaign-card__card card">
                 <div class="card__img">
-                <img src="./assets/images/campaign2.jpg" alt="海と複数のボートの画像">
+                <img src="<?php echo get_theme_file_uri(); ?>/assets/images/campaign2.jpg" alt="海と複数のボートの画像">
               </div>
               <div class="card__contents">
                 <div class="card__head">
@@ -194,7 +194,7 @@
             <div class="swiper-slide campaign-cards__item">
               <a href="#" class="campaign-card__card card">
                 <div class="card__img">
-                <img src="./assets/images/campaign3.jpg" alt="小さいクラゲ達が暗い水の中を泳いでいる画像">
+                <img src="<?php echo get_theme_file_uri(); ?>/assets/images/campaign3.jpg" alt="小さいクラゲ達が暗い水の中を泳いでいる画像">
               </div>
               <div class="card__contents">
                 <div class="card__head">
@@ -215,7 +215,7 @@
             <div class="swiper-slide campaign-cards__item">
               <a href="#" class="campaign-card__card card">
                 <div class="card__img">
-                <img src="./assets/images/campaign4.jpg" alt="4人のダイバーが海面に顔を出している画像">
+                <img src="<?php echo get_theme_file_uri(); ?>/assets/images/campaign4.jpg" alt="4人のダイバーが海面に顔を出している画像">
               </div>
               <div class="card__contents">
                 <div class="card__head">
@@ -261,10 +261,10 @@
       </div>
         <div class="about__content">
           <div class="about__img1 about__img1--sm">
-            <img src="./assets/images/ocean1.jpg" alt="オレンジ色と白色の屋根の上に、シーサーの置物が置いてある画像">
+            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/ocean1.jpg" alt="オレンジ色と白色の屋根の上に、シーサーの置物が置いてある画像">
           </div>
           <div class="about__img1 about__img1--lg">
-            <img src="./assets/images/ocean2.jpg" alt="海の中を2匹の黄色い魚が泳いでいる画像">
+            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/ocean2.jpg" alt="海の中を2匹の黄色い魚が泳いでいる画像">
           </div>
         </div>
           <div class="about__box">
@@ -294,7 +294,7 @@
       </div>
       <div class="information__wrapper">
         <div class="information__img js-colorbox">
-          <img src="./assets/images/info.jpg" alt="珊瑚礁の近くを泳ぐ黄色と青色の魚たち">
+          <img src="<?php echo get_theme_file_uri(); ?>/assets/images/info.jpg" alt="珊瑚礁の近くを泳ぐ黄色と青色の魚たち">
         </div>
 
         <div class="information__box">
@@ -334,7 +334,7 @@
                 <div class="blog-card__header">
                   <div class="blog-card__figure">
                     <div class="blog-card__img">
-                      <img src="./assets/images/blog2.jpg" alt="オレンジ色の珊瑚">
+                      <img src="<?php echo get_theme_file_uri(); ?>/assets/images/blog2.jpg" alt="オレンジ色の珊瑚">
                     </div>
                   </div>
                 </div>
@@ -354,7 +354,7 @@
                 <div class="blog-card__header">
                   <div class="blog-card__figure">
                     <div class="blog-card__img">
-                      <img src="./assets/images/blog3.jpg" alt="ウミガメの画像">
+                      <img src="<?php echo get_theme_file_uri(); ?>/assets/images/blog3.jpg" alt="ウミガメの画像">
                     </div>
                   </div>
                 </div>
@@ -374,7 +374,7 @@
                 <div class="blog-card__header">
                   <div class="blog-card__figure">
                     <div class="blog-card__img">
-                      <img src="./assets/images/blog4.jpg" alt="珊瑚礁の中にいるカクレクマノミ">
+                      <img src="<?php echo get_theme_file_uri(); ?>/assets/images/blog4.jpg" alt="珊瑚礁の中にいるカクレクマノミ">
                     </div>
                   </div>
                 </div>
@@ -424,7 +424,7 @@
                       </div>
                       <div class="voice-card__figure">
                         <div class="voice-card__img js-colorbox">
-                          <img src="./assets/images/voice1.jpg" alt="帽子を被った笑顔の女性">
+                          <img src="<?php echo get_theme_file_uri(); ?>/assets/images/voice1.jpg" alt="帽子を被った笑顔の女性">
                         </div>
                       </div>
                 </div>
@@ -450,7 +450,7 @@
                       </div>
                       <div class="voice-card__figure">
                         <div class="voice-card__img js-colorbox">
-                          <img src="./assets/images/voice2.jpg" alt="グットポーズをしている男性の画像">
+                          <img src="<?php echo get_theme_file_uri(); ?>/assets/images/voice2.jpg" alt="グットポーズをしている男性の画像">
                         </div>
                       </div>
                 </div>
@@ -484,7 +484,7 @@
         </div>
         <div class="price__container">
           <div class="price__img1 u-mobile">
-            <img src="./assets/images/price2.jpg" alt="海を泳いでいる亀の画像">
+            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/price2.jpg" alt="海を泳いでいる亀の画像">
           </div>
             <div class="price__content">
               <div class="price__lists">
@@ -530,7 +530,7 @@
               </div>
 
               <div class="price__img2 js-colorbox u-desktop">
-              <img src="./assets/images/price1.jpg" alt="珊瑚礁の周りを泳ぐ子魚たち">
+              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/price1.jpg" alt="珊瑚礁の周りを泳ぐ子魚たち">
               </div>
 
          </div>
@@ -551,7 +551,7 @@
         <div class="contact__container">
           <div class="contact__content">
             <div class="contact__img2">
-              <img src="./assets/images/contact.svg" alt="CodeUps">
+              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/contact.svg" alt="CodeUps">
             </div>
             <div class="contact__box">
               <p class="contact__text">

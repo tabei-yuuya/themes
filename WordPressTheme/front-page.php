@@ -1,33 +1,32 @@
 <?php get_header(); ?>
 <!-- main visual -->
+<?php
+$top_slider = SCF::get_option_meta('top_slider');
+$top_slider_group = $top_slider['top_slider_group'];
+if (!empty($top_slider_group)) :
+?>
 <div class="mv">
   <div class="mv__inner">
     <div class="mv__slider js-mv-swiper">
       <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <picture>
-            <source srcset="./assets/images/pc-mv1.jpg" media="(min-width: 768px)" >
-            <img src="./assets/images/sp-mv1.jpg" alt="ウミガメがとても綺麗な海を泳いでいる画像">
-          </picture>
-        </div>
-        <div class="swiper-slide">
-          <picture>
-            <source srcset="./assets/images/pc-mv2.jpg" media="(min-width: 768px)" >
-            <img src="./assets/images/sp-mv2.jpg" alt="2人のダイバーがウミガメを見ている">
-          </picture>
-        </div>
+      <?php foreach ($top_slider_group as $item) :
+        //画像
+        $top_img_pc_id = $item['top_slider_img_pc'];
+        $top_img_pc_src = wp_get_attachment_url($top_img_pc_id);
+        $top_img_sp_id = $item['top_slider_img_sp'];
+        $top_img_sp_src = wp_get_attachment_url($top_img_sp_id);
+
+        //alt
+        $alt_pc = get_post_meta($top_img_pc_id, '_wp_attachment_image_alt', true);
+
+      ?>
        <div class="swiper-slide">
           <picture>
-            <source srcset="./assets/images/pc-mv3.jpg" media="(min-width: 768px)" >
-            <img src="./assets/images/sp-mv3.jpg" alt="島と複数の船が海の上を進んでいる画像">
+            <source srcset="<?php echo $top_img_pc_src;?>" media="(min-width: 768px)" >
+            <img src="<?php echo $top_img_sp_src;?>" alt="<?php echo $alt_pc;?>">
           </picture>
         </div>
-        <div class="swiper-slide">
-          <picture>
-            <source srcset="./assets/images/pc-mv4.jpg" media="(min-width: 768px)" >
-            <img src="./assets/images/sp-mv4.jpg" alt="砂浜とエメラルドブルーの海の画像">
-          </picture>
-        </div>
+        <?php endforeach; ?>
       </div>
     </div>
     <div class="mv__title">
@@ -36,6 +35,9 @@
     </div>
   </div>
 </div>
+<?php endif; ?>
+
+
 <!-- main visual -->
 
 <!-- page-top -->
@@ -68,7 +70,7 @@
             <div class="swiper-slide campaign-cards__item">
               <a href="#" class="campaign-cards__card card">
                 <div class="card__img">
-                <img src="./assets/images/campaign1.jpg" alt="たくさんの魚が泳いでいる画像">
+                <img src="<?php echo get_theme_file_uri(); ?>/assets/images/campaign1.jpg" alt="たくさんの魚が泳いでいる画像">
               </div>
               <div class="card__contents">
                 <div class="card__head">
@@ -89,7 +91,7 @@
             <div class="swiper-slide campaign-cards__item">
               <a href="#" class="campaign-cards__card card">
                 <div class="card__img">
-                <img src="./assets/images/campaign2.jpg" alt="海と複数のボートの画像">
+                <img src="<?php echo get_theme_file_uri(); ?>/assets/images/campaign2.jpg" alt="海と複数のボートの画像">
               </div>
               <div class="card__contents">
                 <div class="card__head">
@@ -110,7 +112,7 @@
             <div class="swiper-slide campaign-cards__item">
               <a href="#" class="campaign-cards__card card">
                 <div class="card__img">
-                <img src="./assets/images/campaign3.jpg" alt="小さいクラゲ達が暗い水の中を泳いでいる画像">
+                <img src="<?php echo get_theme_file_uri(); ?>/assets/images/campaign3.jpg" alt="小さいクラゲ達が暗い水の中を泳いでいる画像">
               </div>
               <div class="card__contents">
                 <div class="card__head">
@@ -131,7 +133,7 @@
             <div class="swiper-slide campaign-cards__item">
               <a href="#" class="campaign-cards__card card">
                 <div class="card__img">
-                <img src="./assets/images/campaign4.jpg" alt="4人のダイバーが海面に顔を出している画像">
+                <img src="<?php echo get_theme_file_uri(); ?>/assets/images/campaign4.jpg" alt="4人のダイバーが海面に顔を出している画像">
               </div>
               <div class="card__contents">
                 <div class="card__head">
@@ -152,7 +154,7 @@
             <div class="swiper-slide campaign-cards__item">
               <a href="#" class="campaign-card__card card">
                 <div class="card__img">
-                <img src="./assets/images/campaign1.jpg" alt="たくさんの魚が泳いでいる画像">
+                <img src="<?php echo get_theme_file_uri(); ?>/assets/images/campaign1.jpg" alt="たくさんの魚が泳いでいる画像">
               </div>
               <div class="card__contents">
                 <div class="card__head">
@@ -173,7 +175,7 @@
             <div class="swiper-slide campaign-cards__item">
               <a href="#" class="campaign-card__card card">
                 <div class="card__img">
-                <img src="./assets/images/campaign2.jpg" alt="海と複数のボートの画像">
+                <img src="<?php echo get_theme_file_uri(); ?>/assets/images/campaign2.jpg" alt="海と複数のボートの画像">
               </div>
               <div class="card__contents">
                 <div class="card__head">
@@ -194,7 +196,7 @@
             <div class="swiper-slide campaign-cards__item">
               <a href="#" class="campaign-card__card card">
                 <div class="card__img">
-                <img src="./assets/images/campaign3.jpg" alt="小さいクラゲ達が暗い水の中を泳いでいる画像">
+                <img src="<?php echo get_theme_file_uri(); ?>/assets/images/campaign3.jpg" alt="小さいクラゲ達が暗い水の中を泳いでいる画像">
               </div>
               <div class="card__contents">
                 <div class="card__head">
@@ -215,7 +217,7 @@
             <div class="swiper-slide campaign-cards__item">
               <a href="#" class="campaign-card__card card">
                 <div class="card__img">
-                <img src="./assets/images/campaign4.jpg" alt="4人のダイバーが海面に顔を出している画像">
+                <img src="<?php echo get_theme_file_uri(); ?>/assets/images/campaign4.jpg" alt="4人のダイバーが海面に顔を出している画像">
               </div>
               <div class="card__contents">
                 <div class="card__head">
@@ -261,10 +263,10 @@
       </div>
         <div class="about__content">
           <div class="about__img1 about__img1--sm">
-            <img src="./assets/images/ocean1.jpg" alt="オレンジ色と白色の屋根の上に、シーサーの置物が置いてある画像">
+            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/ocean1.jpg" alt="オレンジ色と白色の屋根の上に、シーサーの置物が置いてある画像">
           </div>
           <div class="about__img1 about__img1--lg">
-            <img src="./assets/images/ocean2.jpg" alt="海の中を2匹の黄色い魚が泳いでいる画像">
+            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/ocean2.jpg" alt="海の中を2匹の黄色い魚が泳いでいる画像">
           </div>
         </div>
           <div class="about__box">
@@ -294,7 +296,7 @@
       </div>
       <div class="information__wrapper">
         <div class="information__img js-colorbox">
-          <img src="./assets/images/info.jpg" alt="珊瑚礁の近くを泳ぐ黄色と青色の魚たち">
+          <img src="<?php echo get_theme_file_uri(); ?>/assets/images/info.jpg" alt="珊瑚礁の近くを泳ぐ黄色と青色の魚たち">
         </div>
 
         <div class="information__box">
@@ -316,6 +318,13 @@
     <!-- information -->
 
     <!-- blog -->
+    <?php
+    // WordPressのカスタムクエリを設定し、ブログ投稿を取得
+    $blog_query          = new WP_Query([
+        'post_type'      => 'post',    // 投稿タイプを'投稿'に指定
+        'posts_per_page' => 3,         // 表示する投稿数
+    ]);
+     if ($blog_query->have_posts()) : ?>
     <section id="blog" class="blog blog-layout">
       <div class="blog__inner inner">
         <div class="blog__title section-title section-title--blog">
@@ -326,69 +335,38 @@
             ブログ
           </p>
         </div>
-
         <div class="blog__cards blog-cards">
-          <div class="blog-cards__card blog-card">
-            <a class="blog-card__link" href="#">
-              <div class="blog-card__item ">
-                <div class="blog-card__header">
-                  <div class="blog-card__figure">
-                    <div class="blog-card__img">
-                      <img src="./assets/images/blog2.jpg" alt="オレンジ色の珊瑚">
+        <?php while ($blog_query->have_posts()) : $blog_query->the_post(); ?>
+        <div class="blog-cards__card blog-card">
+                <a class="blog-card__link blog-card__link--blog-content" href="<?php the_permalink(); ?>">
+                  <div class="blog-card__item ">
+                    <div class="blog-card__header">
+                      <div class="blog-card__figure">
+                        <div class="blog-card__img blog-card__img--blog-content">
+                        <?php if (has_post_thumbnail()) : ?>
+                          <?php the_post_thumbnail( 'full', array( 'class' => 'blog-card__img' ) ); ?>
+                        <?php else : ?>
+                            <img src="<?php echo esc_url(get_theme_file_uri( "/assets/images/no-image.jpg" )); ?>" alt="NoImage画像" />
+                          <?php endif ; ?>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="blog-card__body">
+                      <time  class="blog-card__date" datetime="<?php echo get_the_date('Y-m-d'); ?>"><?php echo get_the_date('Y.m.d'); ?></time>
+                      <p class="blog-card__title"><?php the_title(); ?></p>
+                      <div class="blog-border border border--blog"></div>
+                      <p class="blog-card__copy">ここにテキストが入ります。ここにテキ<br>ストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+                        <br>ここにテキストが入ります。ここにテキ<br>ストが入ります。ここにテキスト</p>
                     </div>
                   </div>
-                </div>
-                <div class="blog-card__body">
-                  <time class="blog-card__date" datetime="">2023.11/17</time>
-                  <p class="blog-card__title">ライセンス取得</p>
-                  <div class="blog-border border border--blog"></div>
-                  <p class="blog-card__copy">ここにテキストが入ります。ここにテキ<br>ストが入ります。ここにテキストが入ります。ここにテキストが入ります。
-                    <br>ここにテキストが入ります。ここにテキ<br>ストが入ります。ここにテキスト</p>
-                </div>
+                </a>
               </div>
-            </a>
-          </div>
-          <div class="blog-cards__card blog-card">
-            <a class="blog-card__link" href="#">
-              <div class="blog-card__item ">
-                <div class="blog-card__header">
-                  <div class="blog-card__figure">
-                    <div class="blog-card__img">
-                      <img src="./assets/images/blog3.jpg" alt="ウミガメの画像">
-                    </div>
-                  </div>
-                </div>
-                <div class="blog-card__body">
-                  <time class="blog-card__date" datetime="">2023.11/17</time>
-                  <p class="blog-card__title">ウミガメと泳ぐ</p>
-                  <div class="blog-border border border--blog"></div>
-                  <p class="blog-card__copy">ここにテキストが入ります。ここにテキ<br>ストが入ります。ここにテキストが入ります。ここにテキストが入ります。
-                    <br>ここにテキストが入ります。ここにテキ<br>ストが入ります。ここにテキスト</p>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="blog-cards__card blog-card">
-            <a class="blog-card__link" href="#">
-              <div class="blog-card__item ">
-                <div class="blog-card__header">
-                  <div class="blog-card__figure">
-                    <div class="blog-card__img">
-                      <img src="./assets/images/blog4.jpg" alt="珊瑚礁の中にいるカクレクマノミ">
-                    </div>
-                  </div>
-                </div>
-                <div class="blog-card__body">
-                  <time class="blog-card__date" datetime="">2023.11/17</time>
-                  <p class="blog-card__title">カクレクマノミ</p>
-                  <div class="blog-border border border--blog"></div>
-                  <p class="blog-card__copy">ここにテキストが入ります。ここにテキ<br>ストが入ります。ここにテキストが入ります。ここにテキストが入ります。
-                    <br>ここにテキストが入ります。ここにテキ<br>ストが入ります。ここにテキスト</p>
-                </div>
-              </div>
-            </a>
-          </div>
+              <?php endwhile; ?>
+              <?php wp_reset_postdata(); ?>
         </div>
+        <?php else : ?>
+          <p>記事が投稿されていません</p>
+        <?php endif; ?>
 
         <div class="blog__btn">
           <a href="blog.html" class="btn">View more<span class="btn__arrow"></span></a>
@@ -424,7 +402,7 @@
                       </div>
                       <div class="voice-card__figure">
                         <div class="voice-card__img js-colorbox">
-                          <img src="./assets/images/voice1.jpg" alt="帽子を被った笑顔の女性">
+                          <img src="<?php echo get_theme_file_uri(); ?>/assets/images/voice1.jpg" alt="帽子を被った笑顔の女性">
                         </div>
                       </div>
                 </div>
@@ -450,7 +428,7 @@
                       </div>
                       <div class="voice-card__figure">
                         <div class="voice-card__img js-colorbox">
-                          <img src="./assets/images/voice2.jpg" alt="グットポーズをしている男性の画像">
+                          <img src="<?php echo get_theme_file_uri(); ?>/assets/images/voice2.jpg" alt="グットポーズをしている男性の画像">
                         </div>
                       </div>
                 </div>
@@ -484,7 +462,7 @@
         </div>
         <div class="price__container">
           <div class="price__img1 u-mobile">
-            <img src="./assets/images/price2.jpg" alt="海を泳いでいる亀の画像">
+            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/price2.jpg" alt="海を泳いでいる亀の画像">
           </div>
             <div class="price__content">
               <div class="price__lists">
@@ -530,7 +508,7 @@
               </div>
 
               <div class="price__img2 js-colorbox u-desktop">
-              <img src="./assets/images/price1.jpg" alt="珊瑚礁の周りを泳ぐ子魚たち">
+              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/price1.jpg" alt="珊瑚礁の周りを泳ぐ子魚たち">
               </div>
 
          </div>
@@ -551,7 +529,7 @@
         <div class="contact__container">
           <div class="contact__content">
             <div class="contact__img2">
-              <img src="./assets/images/contact.svg" alt="CodeUps">
+              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/contact.svg" alt="CodeUps">
             </div>
             <div class="contact__box">
               <p class="contact__text">

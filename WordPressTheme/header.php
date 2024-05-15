@@ -32,20 +32,21 @@
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <script src="<?php echo get_theme_file_uri(); ?>/assets/js/jquery.inview.min.js"></script>
   <script defer src="<?php echo get_theme_file_uri(); ?>/assets/js/script.js"></script>
+  <?php wp_head(); ?>
 </head>
 <body>
   <header id="header" class="header">
     <div class="header__inner">
       <div class="header__title">
         <a href="#" class="header__link-title">
-          <img src="./assets/images/CodeUpscodeups.svg" alt="CodeUps">
+          <img src="<?php echo get_theme_file_uri(); ?>/assets/images/CodeUpscodeups.svg" alt="CodeUps">
         </a>
     </div>
 
       <nav class="header__nav u-desktop">
         <ul class="header__lists">
           <li class="header__list">
-            <a href="campaign.html" class="header__link">
+            <a href="<?php echo esc_url(home_url("/campaign")) ?>" class="header__link">
               <p class="header__text">Campaign</p>
               <p class="header__text  header__text--sub">キャンペーン</p>
             </a>
@@ -63,13 +64,13 @@
             </a>
           </li>
           <li class="header__list">
-            <a href="blog.html" class="header__link">
+            <a href="<?php echo esc_url(home_url("./home")) ?>" class="header__link">
               <p class="header__text">Blog</p>
               <p class="header__text header__text--sub">ブログ</p>
             </a>
           </li>
           <li class="header__list">
-            <a href="voice.html" class="header__link">
+            <a href="<?php echo esc_url(home_url("./voice")) ?>" class="header__link">
               <p class="header__text">Voice</p>
               <p class="header__text header__text--sub">お客様の声</p>
             </a>

@@ -6,10 +6,10 @@
   color: $black;
 }
 
-.blog-detail__title{
+.blog-detail h2{
   font-size: rem(24);
   font-family: $third-font-family;
-  font-weight: $medium;
+  font-weight: $bold;
   color: $black;
   border-bottom: rem(1) solid $green;
   margin-top: rem(6);
